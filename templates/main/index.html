@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+        
+<!-- <h4 class="center-align red lighten-3">{{comment}}</h4> -->
+<ul class="collection body-post">
+    {% for post in posts %}
+        <li class="collection-item">
+            <div class="col s12 m7">
+                <div class="card horizontal">
+                    <div class="card-image">
+                    <img src="https://dejagerart.com/wp-content/uploads/2018/09/Test-Logo-Circle-black-transparent.png" style="height:200px; width:200px">
+                    </div>
+                    <div class="card-stacked">
+                    <div class="card-content">
+                        <p>Project</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/main/details/{{post.id}}"">{{post.title}}</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+
+
+<br>
+
+<!-- <a style="display:block"class="center-align btn" href="/admin">Admin Login</a> -->
+{% endblock %}
